@@ -23,6 +23,7 @@ export function logger(reducer: ActionReducer<any>): ActionReducer<any> {
   };
 }
 
+// runs before our reducers
 export const metaReducers: MetaReducer<AppState>[] = !environment.production
   ? [logger]
   : [];
